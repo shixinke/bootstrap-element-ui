@@ -1,0 +1,302 @@
+@charset "UTF-8";
+.input-number-text-box, .input-number-text {
+    width: 100%;
+    display: inline-block
+}
+
+.input-number-text-box {
+    position: relative;
+    font-size: 14px
+}
+
+.input-number-text-box.input-number-icon-disabled .input-number-text {
+    background-color: #eef1f6;
+    border-color: #d1dbe5;
+    color: #bbb;
+    cursor: not-allowed
+}
+
+.input-number-text-box.input-number-icon-disabled .input-number-text:-webkit-input-placeholder {
+    color: #bfcbd9
+}
+
+.input-number-text-box.input-number-icon-disabled .input-number-text:-moz-placeholder {
+    color: #bfcbd9
+}
+
+.input-number-text-box.input-number-icon-disabled .input-number-text:-ms-input-placeholder {
+    color: #bfcbd9
+}
+
+.input-number-text-box.input-number-icon-disabled .input-number-text:placeholder {
+    color: #bfcbd9
+}
+
+.input-number-text-box.is-active .input-number-text {
+    outline: 0;
+    border-color: #20a0ff
+}
+
+.input-number-text {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #bfcbd9;
+    box-sizing: border-box;
+    color: #1f2d3d;
+    font-size: inherit;
+    height: 36px;
+    line-height: 1;
+    outline: 0;
+    padding: 3px 10px;
+    transition: border-color .2s cubic-bezier(.645, .045, .355, 1)
+}
+
+.input-number-text::-webkit-input-placeholder {
+    color: #97a8be
+}
+
+.input-number-text::-moz-placeholder {
+    color: #97a8be
+}
+
+.input-number-text:-ms-input-placeholder {
+    color: #97a8be
+}
+
+.input-number-text::placeholder {
+    color: #97a8be
+}
+
+.input-number-text:hover {
+    border-color: #8391a5
+}
+
+.input-number-text:focus {
+    outline: 0;
+    border-color: #20a0ff
+}
+
+.input-number-text-box__icon {
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    text-align: center;
+    color: #bfcbd9;
+    transition: all .3s
+}
+
+.input-number-text-box__icon:after {
+    content: '';
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.input-number-text-box__icon + .input-number-text {
+    padding-right: 35px
+}
+
+.input-number-text-box__icon.is-clickable:hover {
+    cursor: pointer;
+    color: #8391a5
+}
+
+.input-number-text-box__icon.is-clickable:hover + .input-number-text {
+    border-color: #8391a5
+}
+
+.input-number-text-box--large {
+    font-size: 16px
+}
+
+.input-number-text-box--large .input-number-text {
+    height: 42px
+}
+
+.input-number-text-box--small {
+    font-size: 13px
+}
+
+.input-number-text-box--small .input-number-text {
+    height: 30px
+}
+
+.input-number-text-box--mini {
+    font-size: 12px
+}
+
+.input-number-text-box--mini .input-number-text {
+    height: 22px
+}
+
+.input-number-text-box-group {
+    line-height: normal;
+    display: inline-table;
+    width: 100%;
+    border-collapse: separate
+}
+
+.input-number-text-box-group > .input-number-text {
+    vertical-align: middle;
+    display: table-cell
+}
+
+.input-number-text-box-group__append, .input-number-text-box-group__prepend {
+    background-color: #fbfdff;
+    color: #97a8be;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    border: 1px solid #bfcbd9;
+    border-radius: 4px;
+    padding: 0 10px;
+    width: 1px;
+    white-space: nowrap
+}
+
+.input-number-text-box-group--prepend .input-number-text, .input-number-text-box-group__append {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.input-number-text-box-group--append .input-number-text, .input-number-text-box-group__prepend {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.input-number-text-box-group__append .el-button, .input-number-text-box-group__append .el-select, .input-number-text-box-group__prepend .el-button, .input-number-text-box-group__prepend .el-select {
+    display: block;
+    margin: -10px
+}
+
+.input-number-text-box-group__append button.el-button, .input-number-text-box-group__append div.el-select .input-number-text, .input-number-text-box-group__append div.el-select:hover .input-number-text, .input-number-text-box-group__prepend button.el-button, .input-number-text-box-group__prepend div.el-select .input-number-text, .input-number-text-box-group__prepend div.el-select:hover .input-number-text {
+    border-color: transparent;
+    background-color: transparent;
+    color: inherit;
+    border-top: 0;
+    border-bottom: 0
+}
+
+.input-number-text-box-group__append .el-button, .input-number-text-box-group__append .input-number-text-box, .input-number-text-box-group__prepend .el-button, .input-number-text-box-group__prepend .input-number-text-box {
+    font-size: inherit
+}
+
+.input-number-text-box-group__prepend {
+    border-right: 0
+}
+
+.input-number-text-box-group__append {
+    border-left: 0
+}
+
+
+.input-number-box {
+    display: inline-block;
+    width: 180px;
+    position: relative
+}
+
+.input-number-box .input-number-text-box {
+    display: block
+}
+
+.input-number-box .input-number-text {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 82px
+}
+
+.input-number-box.is-without-controls .input-number-text {
+    padding-right: 10px
+}
+
+.input-number-box.input-number-icon-disabled .input-number-decrease, .input-number-box.input-number-icon-disabled .input-number-increase {
+    border-color: #d1dbe5;
+    color: #d1dbe5
+}
+
+.input-number-box.input-number-icon-disabled .input-number-decrease:hover, .input-number-box.input-number-icon-disabled .input-number-increase:hover {
+    color: #d1dbe5;
+    cursor: not-allowed
+}
+
+.input-number-decrease, .input-number-increase {
+    height: auto;
+    border-left: 1px solid #bfcbd9;
+    width: 36px;
+    line-height: 34px;
+    top: 1px;
+    text-align: center;
+    color: #97a8be;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1
+}
+
+.input-number-decrease:hover, .input-number-increase:hover {
+    color: #20a0ff
+}
+
+.input-number-decrease:hover:not(.input-number-icon-disabled) ~ .input-number-text-box .input-number-text:not(.input-number-icon-disabled), .input-number-increase:hover:not(.input-number-icon-disabled) ~ .input-number-text-box .input-number-text:not(.input-number-icon-disabled) {
+    border-color: #20a0ff
+}
+
+.input-number-decrease.input-number-icon-disabled, .input-number-increase.input-number-icon-disabled {
+    color: #d1dbe5;
+    cursor: not-allowed
+}
+
+.input-number-increase {
+    right: 0
+}
+
+.input-number-decrease {
+    right: 37px
+}
+
+.input-number-box-large {
+    width: 200px
+}
+
+.input-number-box-large .input-number-decrease, .input-number-box-large .input-number-increase {
+    line-height: 42px;
+    width: 42px;
+    font-size: 16px
+}
+
+.input-number-box-large .input-number-decrease {
+    right: 43px
+}
+
+.input-number-box-large .input-number-text {
+    padding-right: 94px
+}
+
+.input-number-box-small {
+    width: 130px;
+    height:30px;
+}
+
+.input-number-box-small .input-number-decrease, .input-number-box-small .input-number-increase {
+    line-height: 30px;
+    width: 30px;
+    height:29px;
+    font-size: 13px
+}
+
+.input-number-box-small .input-number-decrease {
+    right: 31px;
+}
+
+.input-number-box-small .input-number-text {
+    padding-right: 70px;
+    height:30px;
+}
