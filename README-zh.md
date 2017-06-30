@@ -14,6 +14,22 @@
 
 #### datepicker
 
+#### select
+
+#### switch
+
+#### slider
+
+#### colorPicker
+
+#### transfer
+
+#### table
+
+#### steps
+
+#### loading
+
 
 
 
