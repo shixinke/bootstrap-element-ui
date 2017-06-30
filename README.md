@@ -51,7 +51,7 @@
 
 [fine-uploader](https://github.com/FineUploader/fine-uploader)
 
-[bootstrap-fileinput] (https://github.com/kartik-v/bootstrap-fileinput)
+[bootstrap-fileinput](https://github.com/kartik-v/bootstrap-fileinput)
 
 #### colorPicker
 
@@ -59,11 +59,11 @@
 
 #### transfer(*)
 
-[ng-transfer] (https://github.com/think2011/ng-transfer)
+[ng-transfer](https://github.com/think2011/ng-transfer)
 
-[bootstrap-transfer] (https://github.com/rabihkodeih/bootstrap-transfer)
+[bootstrap-transfer](https://github.com/rabihkodeih/bootstrap-transfer)
 
-[adc-transfers] (https://github.com/ct-adc/adc-transfers)
+[adc-transfers](https://github.com/ct-adc/adc-transfers)
 
 #### table
 
@@ -75,15 +75,17 @@
 
 #### tree
 
-[jstree] (https://github.com/vakata/jstree)
+[jstree](https://github.com/vakata/jstree)
 
 [jquery-treegrid](https://github.com/maxazan/jquery-treegrid)
 
 #### notification
 
-[jquery.notification] (https://github.com/azproduction/jquery.notification)
+[jquery.notification](https://github.com/azproduction/jquery.notification)
 
-[jquery-notify] (https://github.com/ehynds/jquery-notify)
+[jquery-notify](https://github.com/ehynds/jquery-notify)
+
+
 
 Recommend a github repository：
 
