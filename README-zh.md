@@ -1,8 +1,21 @@
-# perfect-form
+# bootstrap element UI
 
-它是一个基于css和javascript的表单插件，目的是为了美化表单，它是基于elementUI的css基础上的，目的是为了在不使用VUE的基础上使用这个插件
+它是一个用于美化HTML元素(如表单元素)的插件集合，借鉴了eleme的elementUI的样式，将各种开源的js插件结合起来
 
 ## 概览
+
+### 1、主要插件：
+
+#### input-number
+
+#### input-tags
+
+#### icheck
+
+#### datepicker
+
+
+
 
 ## 用法
 
