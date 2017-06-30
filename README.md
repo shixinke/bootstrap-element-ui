@@ -5,6 +5,33 @@
 
 ## Overview
 
+### plugins
+
+#### input-number
+
+#### input-tags
+
+#### icheck
+
+#### datepicker
+
+#### select
+
+#### switch
+
+#### slider
+
+#### colorPicker
+
+#### transfer
+
+#### table
+
+#### steps
+
+#### loading
+
+
 ## Usage
 
 ## API
