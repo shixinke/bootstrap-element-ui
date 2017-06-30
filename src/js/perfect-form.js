@@ -21,36 +21,52 @@ inputNumber.prototype = {
         this.options.minusElement = this.options.element.find('.input-number-decrease');
         var min = this.options.inputElement.prop('min');
         var max =  this.options.inputElement.prop('max');
+        var step = this.options.inputElement.prop('step');
+        this.options.defaultValue = 1;
+        this.options.max = max && parseInt(max);
+        this.options.step = step ? parseInt(step) : 1;
         if (min) {
             this.options.min = parseInt(min);
-        }
-        if (max) {
-            this.options.max = parseInt(max);
+            this.options.defaultValue = min;
+            if (!this.getValue()) {
+                this.options.inputElement.val(min);
+                this.options.minusElement.addClass('input-number-icon-disabled');
+            }
         }
     },
     run:function() {
         var _this = this;
-        _this.options.plusElement.not('.input-number-icon-disabled').on('click', function(){
+        _this.options.plusElement.on('click', function(){
             var value = _this.getValue(0);
-            if (this.options.max && value < this.options.max) {
-                value++;
+            if ($(this).hasClass('input-number-icon-disabled')) {
+                return;
+            }
+            if (_this.options.max && value < _this.options.max && (value <= _this.options.max - _this.options.step)) {
+                value += _this.options.step;
                 _this.options.inputElement.val(value);
+            }
+            _this.checkStatus();
+        });
+        _this.options.minusElement.on('click', function(){
+            var value = _this.getValue(0);
+            if ($(this).hasClass('input-number-icon-disabled')) {
+                return;
+            }
+            if (_this.options.min && value > _this.options.min && ( value >= _this.options.min + _this.options.step)) {
+                value -= _this.options.step;
+                _this.options.inputElement.val(value);
+            }
+            _this.checkStatus();
+        });
+        _this.options.inputElement.on('keyup', function(){
+            var value = _this.getValue();
+            if (isNaN(value)) {
+                $(this).val(_this.options.defaultValue);
             } else {
-                $(this).addClass('input-number-icon-disabled')
+                _this.checkStatus();
             }
 
-        });
-        _this.options.minusElement.not('.input-number-icon-disabled').on('click', function(){
-            var value = _this.getValue(0);
-            if (this.options.min && value > this.options.min) {
-                value--;
-                _this.options.inputElement.val(value);
-                _this.options.inputElement.val(value);
-            } else {
-                $(this).addClass('input-number-icon-disabled')
-            }
-
-        });
+        })
     },
     getValue:function(defaultValue) {
         var val =  this.options.inputElement.val();
@@ -60,6 +76,24 @@ inputNumber.prototype = {
             val = defaultValue;
         }
         return val;
+    },
+    checkStatus:function() {
+        var _this = this;
+        var value = this.getValue();
+        if (_this.options.min && _this.options.min >= value) {
+            _this.options.minusElement.addClass('input-number-icon-disabled');
+            _this.options.inputElement.val(_this.options.min);
+
+        } else {
+            _this.options.minusElement.removeClass('input-number-icon-disabled');
+        }
+        if (_this.options.max && _this.options.max <= value) {
+            _this.options.plusElement.addClass('input-number-icon-disabled');
+            _this.options.inputElement.val(_this.options.max);
+
+        } else {
+            _this.options.plusElement.removeClass('input-number-icon-disabled');
+        }
     }
 };
 
